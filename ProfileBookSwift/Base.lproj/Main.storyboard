@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BFC-JG-85D">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -28,22 +29,22 @@
             <objects>
                 <viewController id="2qJ-fW-BGD" customClass="SignInViewController" customModule="ProfileBookSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OmY-P5-aDe">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bK0-cr-HgD">
-                                <rect key="frame" x="0.0" y="44" width="600" height="300"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="448"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="ABe-WJ-npv">
-                                        <rect key="frame" x="40" y="101" width="520" height="98"/>
+                                        <rect key="frame" x="40" y="175" width="334" height="98"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vQ5-0J-obS">
-                                                <rect key="frame" x="0.0" y="0.0" width="520" height="34"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="334" height="34"/>
                                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7y1-Xc-9dt">
-                                                <rect key="frame" x="0.0" y="64" width="520" height="34"/>
+                                                <rect key="frame" x="0.0" y="64" width="334" height="34"/>
                                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -58,13 +59,13 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KfE-g3-wAb">
-                                <rect key="frame" x="0.0" y="344" width="600" height="256"/>
+                                <rect key="frame" x="0.0" y="536" width="414" height="326"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eSD-5K-Kt7">
-                                        <rect key="frame" x="40" y="142.5" width="520" height="93.5"/>
+                                        <rect key="frame" x="40" y="212.5" width="334" height="93.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JMT-x1-hZ1">
-                                                <rect key="frame" x="0.0" y="0.0" width="520" height="51"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="334" height="51"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="SIGN IN" buttonSize="large">
                                                     <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
@@ -76,7 +77,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dab-gd-JJX">
-                                                <rect key="frame" x="0.0" y="61" width="520" height="32.5"/>
+                                                <rect key="frame" x="0.0" y="61" width="334" height="32.5"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Button">
                                                     <attributedString key="attributedTitle">
@@ -153,27 +154,42 @@
             <objects>
                 <viewController id="bRr-cy-ieK" customClass="MenuListViewController" customModule="ProfileBookSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SMe-SQ-MQ4">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="6co-1V-rZy">
-                                <rect key="frame" x="0.0" y="44" width="600" height="556"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="meF-y5-QKq">
+                                <rect key="frame" x="308" y="756" width="90" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="7qv-W6-gzd"/>
+                                    <constraint firstAttribute="height" constant="90" id="k5p-j5-6aN"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="ic_add" cornerStyle="capsule"/>
+                                <connections>
+                                    <action selector="onAddProfileTapped:" destination="bRr-cy-ieK" eventType="touchUpInside" id="EjH-mq-Mx5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="s81-Wv-Cnc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6co-1V-rZy" firstAttribute="leading" secondItem="s81-Wv-Cnc" secondAttribute="leading" id="6qC-nc-13t"/>
                             <constraint firstItem="s81-Wv-Cnc" firstAttribute="bottom" secondItem="6co-1V-rZy" secondAttribute="bottom" id="GhP-Aw-1CZ"/>
+                            <constraint firstItem="s81-Wv-Cnc" firstAttribute="bottom" secondItem="meF-y5-QKq" secondAttribute="bottom" constant="16" id="Gri-UO-dc1"/>
                             <constraint firstItem="s81-Wv-Cnc" firstAttribute="trailing" secondItem="6co-1V-rZy" secondAttribute="trailing" id="KJA-j3-GQl"/>
+                            <constraint firstItem="s81-Wv-Cnc" firstAttribute="trailing" secondItem="meF-y5-QKq" secondAttribute="trailing" constant="16" id="PMj-D5-dpn"/>
                             <constraint firstItem="6co-1V-rZy" firstAttribute="top" secondItem="s81-Wv-Cnc" secondAttribute="top" id="TaE-hN-dwh"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Main List" id="ID8-dk-mGe"/>
                     <connections>
+                        <outlet property="addButton" destination="meF-y5-QKq" id="3Vn-9u-drl"/>
                         <outlet property="tableView" destination="6co-1V-rZy" id="Ncm-rV-PyS"/>
-                        <segue destination="Ptt-eM-QAD" kind="show" id="iTa-0q-luQ"/>
+                        <segue destination="Ptt-eM-QAD" kind="show" identifier="goToAddEditProfile" id="iTa-0q-luQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HmS-ne-gnN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -183,14 +199,55 @@
         <!--Add Profile-->
         <scene sceneID="z0B-iB-Gut">
             <objects>
-                <viewController id="Ptt-eM-QAD" sceneMemberID="viewController">
+                <viewController id="Ptt-eM-QAD" customClass="AddEditProfileViewController" customModule="ProfileBookSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RjM-dd-lZi">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic_profile" translatesAutoresizingMaskIntoConstraints="NO" id="phi-ZW-gVY">
+                                <rect key="frame" x="40" y="93" width="334" height="251"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="NickName" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pkE-mP-et4">
+                                <rect key="frame" x="40" y="384" width="334" height="34"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8QZ-Iz-dAh">
+                                <rect key="frame" x="40" y="448" width="334" height="34"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fIj-QI-Mwu">
+                                <rect key="frame" x="40" y="512" width="334" height="334"/>
+                                <color key="backgroundColor" red="0.82745098039215681" green="0.82745098039215681" blue="0.82745098039215681" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ll6-gs-g5o"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ll6-gs-g5o" firstAttribute="trailing" secondItem="phi-ZW-gVY" secondAttribute="trailing" constant="40" id="1Mv-GO-oYd"/>
+                            <constraint firstItem="pkE-mP-et4" firstAttribute="leading" secondItem="ll6-gs-g5o" secondAttribute="leading" constant="40" id="47C-iP-Z3y"/>
+                            <constraint firstItem="ll6-gs-g5o" firstAttribute="trailing" secondItem="8QZ-Iz-dAh" secondAttribute="trailing" constant="40" id="FAn-UU-jGp"/>
+                            <constraint firstItem="phi-ZW-gVY" firstAttribute="height" secondItem="RjM-dd-lZi" secondAttribute="height" multiplier="0.28" id="HoT-de-Kpp"/>
+                            <constraint firstItem="ll6-gs-g5o" firstAttribute="trailing" secondItem="fIj-QI-Mwu" secondAttribute="trailing" constant="40" id="O8J-KW-cwU"/>
+                            <constraint firstItem="fIj-QI-Mwu" firstAttribute="top" secondItem="8QZ-Iz-dAh" secondAttribute="bottom" constant="30" id="aUz-aM-a2T"/>
+                            <constraint firstItem="8QZ-Iz-dAh" firstAttribute="leading" secondItem="ll6-gs-g5o" secondAttribute="leading" constant="40" id="bHz-Lj-bCO"/>
+                            <constraint firstItem="ll6-gs-g5o" firstAttribute="bottom" secondItem="fIj-QI-Mwu" secondAttribute="bottom" constant="16" id="fRa-ik-amr"/>
+                            <constraint firstItem="phi-ZW-gVY" firstAttribute="top" secondItem="ll6-gs-g5o" secondAttribute="top" constant="5" id="h8V-JY-i6U"/>
+                            <constraint firstItem="fIj-QI-Mwu" firstAttribute="leading" secondItem="ll6-gs-g5o" secondAttribute="leading" constant="40" id="hYd-sS-wV6"/>
+                            <constraint firstItem="8QZ-Iz-dAh" firstAttribute="top" secondItem="pkE-mP-et4" secondAttribute="bottom" constant="30" id="hZM-SU-arR"/>
+                            <constraint firstItem="pkE-mP-et4" firstAttribute="top" secondItem="phi-ZW-gVY" secondAttribute="bottom" constant="40" id="igi-CJ-qF6"/>
+                            <constraint firstItem="phi-ZW-gVY" firstAttribute="leading" secondItem="ll6-gs-g5o" secondAttribute="leading" constant="40" id="sCm-wl-dhO"/>
+                            <constraint firstItem="ll6-gs-g5o" firstAttribute="trailing" secondItem="pkE-mP-et4" secondAttribute="trailing" constant="40" id="zyX-gq-zOY"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add Profile" id="HYg-Yz-61p"/>
+                    <connections>
+                        <outlet property="descriptionTextView" destination="fIj-QI-Mwu" id="da4-5g-7qt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="544-Z9-rWH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -201,27 +258,27 @@
             <objects>
                 <viewController id="3tO-hP-V9e" customClass="SignUpViewController" customModule="ProfileBookSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="38K-Sb-obH">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Du5-xE-sVe">
-                                <rect key="frame" x="0.0" y="44" width="600" height="300"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="448"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="U38-gF-D9x">
-                                        <rect key="frame" x="40" y="69" width="520" height="162"/>
+                                        <rect key="frame" x="40" y="143" width="334" height="162"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xbA-MQ-66p">
-                                                <rect key="frame" x="0.0" y="0.0" width="520" height="34"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="334" height="34"/>
                                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gmy-A6-gKd">
-                                                <rect key="frame" x="0.0" y="64" width="520" height="34"/>
+                                                <rect key="frame" x="0.0" y="64" width="334" height="34"/>
                                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BuM-W4-Kwk">
-                                                <rect key="frame" x="0.0" y="128" width="520" height="34"/>
+                                                <rect key="frame" x="0.0" y="128" width="334" height="34"/>
                                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -236,10 +293,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c6w-vO-iXn">
-                                <rect key="frame" x="0.0" y="344" width="600" height="256"/>
+                                <rect key="frame" x="0.0" y="536" width="414" height="326"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B4b-OW-Z9B">
-                                        <rect key="frame" x="40" y="185" width="520" height="51"/>
+                                        <rect key="frame" x="40" y="255" width="334" height="51"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="SIGN UP" buttonSize="large">
                                             <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
@@ -280,6 +337,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ic_add" width="24" height="24"/>
+        <image name="pic_profile" width="256" height="256"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

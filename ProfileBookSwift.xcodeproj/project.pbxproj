@@ -13,6 +13,7 @@
 		CE811ABB27E88FE9000C5229 /* ProfileViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE811AB927E88FE9000C5229 /* ProfileViewCell.swift */; };
 		CE811ABC27E88FE9000C5229 /* ProfileViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE811ABA27E88FE9000C5229 /* ProfileViewCell.xib */; };
 		CE811AC027E8AEC3000C5229 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE811ABF27E8AEC3000C5229 /* ProfileModel.swift */; };
+		CE95D39527E8F0D8001791CB /* AddEditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE95D39427E8F0D8001791CB /* AddEditProfileViewController.swift */; };
 		CED8518827C4F697005C5C9A /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED8518727C4F697005C5C9A /* SignInViewController.swift */; };
 		CEE1627227C385A80084B87C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE1627127C385A80084B87C /* AppDelegate.swift */; };
 		CEE1627427C385A80084B87C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE1627327C385A80084B87C /* SceneDelegate.swift */; };
@@ -48,6 +49,7 @@
 		CE811AB927E88FE9000C5229 /* ProfileViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewCell.swift; sourceTree = "<group>"; };
 		CE811ABA27E88FE9000C5229 /* ProfileViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewCell.xib; sourceTree = "<group>"; };
 		CE811ABF27E8AEC3000C5229 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
+		CE95D39427E8F0D8001791CB /* AddEditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditProfileViewController.swift; sourceTree = "<group>"; };
 		CED8518727C4F697005C5C9A /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		CEE1626E27C385A80084B87C /* ProfileBookSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProfileBookSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE1627127C385A80084B87C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				CE655FAA27E257AF004FAFD0 /* SignUpViewController.swift */,
 				CE811AB227E61DAD000C5229 /* MainListNavigationController.swift */,
 				CE811AB427E88D16000C5229 /* MenuListViewController.swift */,
+				CE95D39427E8F0D8001791CB /* AddEditProfileViewController.swift */,
 			);
 			path = ViewConrollers;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				CE811AB327E61DAD000C5229 /* MainListNavigationController.swift in Sources */,
 				CED8518827C4F697005C5C9A /* SignInViewController.swift in Sources */,
 				CE811AC027E8AEC3000C5229 /* ProfileModel.swift in Sources */,
+				CE95D39527E8F0D8001791CB /* AddEditProfileViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

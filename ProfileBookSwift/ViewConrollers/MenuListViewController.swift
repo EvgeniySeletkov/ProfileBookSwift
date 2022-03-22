@@ -3,14 +3,22 @@ import UIKit
 class MenuListViewController: UIViewController {
     private var _profileList: ProfileList = ProfileList()
     
+    @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        addButton.layer.cornerRadius = 45
+        addButton.layer.borderWidth = 8
+        addButton.layer.borderColor = UIColor.darkGray.cgColor
         
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UINib(nibName: "ProfileViewCell", bundle: nil), forCellReuseIdentifier: "ProfileViewCell")
+    }
+    
+    @IBAction func onAddProfileTapped(_ sender: Any) {
+        performSegue(withIdentifier: "goToAddEditProfile", sender: nil)
     }
 }
 
