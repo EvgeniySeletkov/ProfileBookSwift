@@ -23,6 +23,9 @@
 		CEE1628927C385AB0084B87C /* ProfileBookSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE1628827C385AB0084B87C /* ProfileBookSwiftTests.swift */; };
 		CEE1629327C385AB0084B87C /* ProfileBookSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE1629227C385AB0084B87C /* ProfileBookSwiftUITests.swift */; };
 		CEE1629527C385AB0084B87C /* ProfileBookSwiftUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE1629427C385AB0084B87C /* ProfileBookSwiftUITestsLaunchTests.swift */; };
+		CEE4EEF227F19D930086BBDA /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = CEE4EEF127F19D930086BBDA /* SQLite */; };
+		CEE4EEF527F19F440086BBDA /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE4EEF427F19F440086BBDA /* Database.swift */; };
+		CEE4EEF727F1A5110086BBDA /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE4EEF627F1A5110086BBDA /* ProfileService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,8 @@
 		CEE1628E27C385AB0084B87C /* ProfileBookSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProfileBookSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE1629227C385AB0084B87C /* ProfileBookSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileBookSwiftUITests.swift; sourceTree = "<group>"; };
 		CEE1629427C385AB0084B87C /* ProfileBookSwiftUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileBookSwiftUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CEE4EEF427F19F440086BBDA /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		CEE4EEF627F1A5110086BBDA /* ProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEE4EEF227F19D930086BBDA /* SQLite in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,6 +148,7 @@
 		CEE1627027C385A80084B87C /* ProfileBookSwift */ = {
 			isa = PBXGroup;
 			children = (
+				CEE4EEF327F19F0C0086BBDA /* Services */,
 				CE811ABE27E8AE98000C5229 /* Models */,
 				CE811AB627E88F2C000C5229 /* ViewCells */,
 				CED8518627C4F64E005C5C9A /* ViewConrollers */,
@@ -172,6 +179,15 @@
 			path = ProfileBookSwiftUITests;
 			sourceTree = "<group>";
 		};
+		CEE4EEF327F19F0C0086BBDA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CEE4EEF427F19F440086BBDA /* Database.swift */,
+				CEE4EEF627F1A5110086BBDA /* ProfileService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -188,6 +204,9 @@
 			dependencies = (
 			);
 			name = ProfileBookSwift;
+			packageProductDependencies = (
+				CEE4EEF127F19D930086BBDA /* SQLite */,
+			);
 			productName = ProfileBookSwift;
 			productReference = CEE1626E27C385A80084B87C /* ProfileBookSwift.app */;
 			productType = "com.apple.product-type.application";
@@ -260,6 +279,9 @@
 				Base,
 			);
 			mainGroup = CEE1626527C385A80084B87C;
+			packageReferences = (
+				CEE4EEF027F19D930086BBDA /* XCRemoteSwiftPackageReference "SQLite" */,
+			);
 			productRefGroup = CEE1626F27C385A80084B87C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -305,6 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE811ABB27E88FE9000C5229 /* ProfileViewCell.swift in Sources */,
+				CEE4EEF527F19F440086BBDA /* Database.swift in Sources */,
 				CEE1627227C385A80084B87C /* AppDelegate.swift in Sources */,
 				CEE1627427C385A80084B87C /* SceneDelegate.swift in Sources */,
 				CE655FAB27E257AF004FAFD0 /* SignUpViewController.swift in Sources */,
@@ -313,6 +336,7 @@
 				CED8518827C4F697005C5C9A /* SignInViewController.swift in Sources */,
 				CE811AC027E8AEC3000C5229 /* ProfileModel.swift in Sources */,
 				CE95D39527E8F0D8001791CB /* AddEditProfileViewController.swift in Sources */,
+				CEE4EEF727F1A5110086BBDA /* ProfileService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -654,6 +678,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CEE4EEF027F19D930086BBDA /* XCRemoteSwiftPackageReference "SQLite" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stephencelis/SQLite.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CEE4EEF127F19D930086BBDA /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEE4EEF027F19D930086BBDA /* XCRemoteSwiftPackageReference "SQLite" */;
+			productName = SQLite;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CEE1626627C385A80084B87C /* Project object */;
 }

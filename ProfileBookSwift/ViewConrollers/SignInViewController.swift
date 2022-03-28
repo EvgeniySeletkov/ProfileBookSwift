@@ -1,8 +1,9 @@
 import UIKit
+import SQLite
 
-class SignInViewController: UIViewController {
+public class SignInViewController: UIViewController {
 
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
     }
     

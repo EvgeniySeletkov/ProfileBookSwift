@@ -1,8 +1,8 @@
 import UIKit
 
-class MainListNavigationController: UINavigationController {
+public class MainListNavigationController: UINavigationController {
 
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
     }
 }

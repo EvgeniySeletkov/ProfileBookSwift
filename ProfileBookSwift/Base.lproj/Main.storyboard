@@ -244,9 +244,17 @@
                             <constraint firstItem="ll6-gs-g5o" firstAttribute="trailing" secondItem="pkE-mP-et4" secondAttribute="trailing" constant="40" id="zyX-gq-zOY"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Add Profile" id="HYg-Yz-61p"/>
+                    <navigationItem key="navigationItem" title="Add Profile" id="HYg-Yz-61p">
+                        <barButtonItem key="rightBarButtonItem" image="ic_save" id="8NF-eJ-jvK">
+                            <connections>
+                                <action selector="onSaveProfileTapped:" destination="Ptt-eM-QAD" id="UeO-OK-Scp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="descriptionTextView" destination="fIj-QI-Mwu" id="da4-5g-7qt"/>
+                        <outlet property="nameTextField" destination="8QZ-Iz-dAh" id="9Pr-ry-d7E"/>
+                        <outlet property="nicknameTextField" destination="pkE-mP-et4" id="l0g-aT-0DE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="544-Z9-rWH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -338,6 +346,7 @@
     </scenes>
     <resources>
         <image name="ic_add" width="24" height="24"/>
+        <image name="ic_save" width="24" height="24"/>
         <image name="pic_profile" width="256" height="256"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
