@@ -1,6 +1,6 @@
 import UIKit
 
-public class MenuListViewController: UIViewController {
+public class MainListViewController: UIViewController {
     private var _profiles: [ProfileModel] = ProfileService.shared.getProfilesByUserId()
     
     @IBOutlet weak var addButton: UIButton!
@@ -24,12 +24,19 @@ public class MenuListViewController: UIViewController {
         tableView.reloadData()
     }
     
+    @IBAction func onLogOutTapped(_ sender: Any) {
+        let signInNC = storyboard?.instantiateViewController(withIdentifier: "SignInNavigationController") as! SignInNavigationController
+
+        view.window?.rootViewController = signInNC
+        view.window?.makeKeyAndVisible()
+    }
+    
     @IBAction func onAddProfileTapped(_ sender: Any) {
         performSegue(withIdentifier: "goToAddEditProfile", sender: nil)
     }
 }
 
-extension MenuListViewController: UITableViewDataSource, UITableViewDelegate{
+extension MainListViewController: UITableViewDataSource, UITableViewDelegate{
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return _profiles.count
     }

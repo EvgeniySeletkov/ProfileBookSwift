@@ -8,7 +8,10 @@ public class SignInViewController: UIViewController {
     }
     
     @IBAction func onSignInTapped(_ sender: Any) {
-        performSegue(withIdentifier: "goToMainList", sender: nil)
+        let mainListNC = storyboard?.instantiateViewController(withIdentifier: "MainListNavigationController") as! MainListNavigationController
+
+        view.window?.rootViewController = mainListNC
+        view.window?.makeKeyAndVisible()
     }
     
     @IBAction func onSignUpTapped(_ sender: Any) {

@@ -9,8 +9,9 @@
 /* Begin PBXBuildFile section */
 		CE236AFE27F375A700D184C1 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE236AFD27F375A700D184C1 /* ImageService.swift */; };
 		CE655FAB27E257AF004FAFD0 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE655FAA27E257AF004FAFD0 /* SignUpViewController.swift */; };
+		CE79A35427F48E2500587F7D /* SignInNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE79A35327F48E2500587F7D /* SignInNavigationController.swift */; };
 		CE811AB327E61DAD000C5229 /* MainListNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE811AB227E61DAD000C5229 /* MainListNavigationController.swift */; };
-		CE811AB527E88D16000C5229 /* MenuListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE811AB427E88D16000C5229 /* MenuListViewController.swift */; };
+		CE811AB527E88D16000C5229 /* MainListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE811AB427E88D16000C5229 /* MainListViewController.swift */; };
 		CE811ABB27E88FE9000C5229 /* ProfileViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE811AB927E88FE9000C5229 /* ProfileViewCell.swift */; };
 		CE811ABC27E88FE9000C5229 /* ProfileViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE811ABA27E88FE9000C5229 /* ProfileViewCell.xib */; };
 		CE811AC027E8AEC3000C5229 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE811ABF27E8AEC3000C5229 /* ProfileModel.swift */; };
@@ -49,8 +50,9 @@
 /* Begin PBXFileReference section */
 		CE236AFD27F375A700D184C1 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		CE655FAA27E257AF004FAFD0 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		CE79A35327F48E2500587F7D /* SignInNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInNavigationController.swift; sourceTree = "<group>"; };
 		CE811AB227E61DAD000C5229 /* MainListNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListNavigationController.swift; sourceTree = "<group>"; };
-		CE811AB427E88D16000C5229 /* MenuListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListViewController.swift; sourceTree = "<group>"; };
+		CE811AB427E88D16000C5229 /* MainListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListViewController.swift; sourceTree = "<group>"; };
 		CE811AB927E88FE9000C5229 /* ProfileViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewCell.swift; sourceTree = "<group>"; };
 		CE811ABA27E88FE9000C5229 /* ProfileViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewCell.xib; sourceTree = "<group>"; };
 		CE811ABF27E8AEC3000C5229 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
@@ -121,8 +123,9 @@
 				CED8518727C4F697005C5C9A /* SignInViewController.swift */,
 				CE655FAA27E257AF004FAFD0 /* SignUpViewController.swift */,
 				CE811AB227E61DAD000C5229 /* MainListNavigationController.swift */,
-				CE811AB427E88D16000C5229 /* MenuListViewController.swift */,
+				CE811AB427E88D16000C5229 /* MainListViewController.swift */,
 				CE95D39427E8F0D8001791CB /* AddEditProfileViewController.swift */,
+				CE79A35327F48E2500587F7D /* SignInNavigationController.swift */,
 			);
 			path = ViewConrollers;
 			sourceTree = "<group>";
@@ -330,12 +333,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE811ABB27E88FE9000C5229 /* ProfileViewCell.swift in Sources */,
+				CE79A35427F48E2500587F7D /* SignInNavigationController.swift in Sources */,
 				CEE4EEF527F19F440086BBDA /* Database.swift in Sources */,
 				CEE1627227C385A80084B87C /* AppDelegate.swift in Sources */,
 				CEE1627427C385A80084B87C /* SceneDelegate.swift in Sources */,
 				CE655FAB27E257AF004FAFD0 /* SignUpViewController.swift in Sources */,
 				CE236AFE27F375A700D184C1 /* ImageService.swift in Sources */,
-				CE811AB527E88D16000C5229 /* MenuListViewController.swift in Sources */,
+				CE811AB527E88D16000C5229 /* MainListViewController.swift in Sources */,
 				CE811AB327E61DAD000C5229 /* MainListNavigationController.swift in Sources */,
 				CED8518827C4F697005C5C9A /* SignInViewController.swift in Sources */,
 				CE811AC027E8AEC3000C5229 /* ProfileModel.swift in Sources */,

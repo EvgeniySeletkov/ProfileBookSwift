@@ -2,16 +2,18 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BFC-JG-85D">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--Sign In Navigation Controller-->
         <scene sceneID="2Zz-QK-FHC">
             <objects>
-                <navigationController id="BFC-JG-85D" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="SignInNavigationController" id="BFC-JG-85D" customClass="SignInNavigationController" customModule="ProfileBookSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="mC4-Cc-hxS"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="K5C-bK-kzx">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -124,7 +126,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Users SignIn" id="dkY-J8-8p9"/>
                     <connections>
-                        <segue destination="FQR-ct-F8i" kind="show" identifier="goToMainList" id="TKx-PS-siZ"/>
                         <segue destination="3tO-hP-V9e" kind="show" identifier="goToSignUp" id="2TK-72-5nq"/>
                     </connections>
                 </viewController>
@@ -135,7 +136,7 @@
         <!--Main List Navigation Controller-->
         <scene sceneID="Fjy-kf-h78">
             <objects>
-                <navigationController modalPresentationStyle="fullScreen" id="FQR-ct-F8i" customClass="MainListNavigationController" customModule="ProfileBookSwift" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MainListNavigationController" modalPresentationStyle="fullScreen" id="FQR-ct-F8i" customClass="MainListNavigationController" customModule="ProfileBookSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="3n0-Nz-zYj"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="reN-Vg-OEO">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -152,7 +153,7 @@
         <!--Main List-->
         <scene sceneID="cgu-2M-Fb3">
             <objects>
-                <viewController id="bRr-cy-ieK" customClass="MenuListViewController" customModule="ProfileBookSwift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bRr-cy-ieK" customClass="MainListViewController" customModule="ProfileBookSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SMe-SQ-MQ4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -185,7 +186,13 @@
                             <constraint firstItem="6co-1V-rZy" firstAttribute="top" secondItem="s81-Wv-Cnc" secondAttribute="top" id="TaE-hN-dwh"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Main List" id="ID8-dk-mGe"/>
+                    <navigationItem key="navigationItem" title="Main List" id="ID8-dk-mGe">
+                        <barButtonItem key="rightBarButtonItem" image="ic_exit" id="Ipr-8W-KMK">
+                            <connections>
+                                <action selector="onLogOutTapped:" destination="bRr-cy-ieK" id="b70-qR-jEz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="addButton" destination="meF-y5-QKq" id="3Vn-9u-drl"/>
                         <outlet property="tableView" destination="6co-1V-rZy" id="Ncm-rV-PyS"/>
@@ -347,6 +354,7 @@
     </scenes>
     <resources>
         <image name="ic_add" width="24" height="24"/>
+        <image name="ic_exit" width="24" height="24"/>
         <image name="ic_save" width="24" height="24"/>
         <image name="pic_profile" width="256" height="256"/>
         <systemColor name="labelColor">
