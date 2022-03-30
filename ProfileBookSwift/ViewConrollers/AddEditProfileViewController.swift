@@ -13,6 +13,7 @@ public class AddEditProfileViewController: UIViewController, UIImagePickerContro
     public override func viewDidLoad() {
         super.viewDidLoad()
         _imagePicker.delegate = self
+        _imagePicker.allowsEditing = true
         let imageTapAction = UITapGestureRecognizer(target: self, action: #selector(onImageTapped))
         imageView.addGestureRecognizer(imageTapAction)
         imageView.isUserInteractionEnabled = true
@@ -59,9 +60,25 @@ public class AddEditProfileViewController: UIViewController, UIImagePickerContro
     }
     
     @objc private func onImageTapped(sender: UITapGestureRecognizer) {
-        _imagePicker.allowsEditing = false
-        _imagePicker.sourceType = .photoLibrary
+        let alert = UIAlertController(title: "", message: "", preferredStyle: .actionSheet)
+        let cameraAction = UIAlertAction(title: "Camera", style: .default) { action in
+            self._imagePicker.sourceType = .camera
+            self.pickImage()
+        }
+        let galleryAction = UIAlertAction(title: "Gallery", style: .default) { action in
+            self._imagePicker.sourceType = .photoLibrary
+            self.pickImage()
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         
+        alert.addAction(cameraAction)
+        alert.addAction(galleryAction)
+        alert.addAction(cancelAction)
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
+    private func pickImage() {
         present(_imagePicker, animated: true, completion: nil)
     }
     
