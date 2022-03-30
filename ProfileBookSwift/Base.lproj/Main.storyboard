@@ -199,7 +199,7 @@
         <!--Add Profile-->
         <scene sceneID="z0B-iB-Gut">
             <objects>
-                <viewController id="Ptt-eM-QAD" customClass="AddEditProfileViewController" customModule="ProfileBookSwift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddEditProfileViewController" id="Ptt-eM-QAD" customClass="AddEditProfileViewController" customModule="ProfileBookSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RjM-dd-lZi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -253,6 +253,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="descriptionTextView" destination="fIj-QI-Mwu" id="da4-5g-7qt"/>
+                        <outlet property="imageView" destination="phi-ZW-gVY" id="lhE-sP-6sG"/>
                         <outlet property="nameTextField" destination="8QZ-Iz-dAh" id="9Pr-ry-d7E"/>
                         <outlet property="nicknameTextField" destination="pkE-mP-et4" id="l0g-aT-0DE"/>
                     </connections>

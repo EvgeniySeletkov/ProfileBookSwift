@@ -15,8 +15,11 @@ public class ProfileViewCell: UITableViewCell {
     }
     
     public func setProfile(profile: ProfileModel){
-        let image = UIImage(named: "pic_profile")
-        profileImage.image = image
+        let image = ImageService.shared.loadImage(fileName: profile.image)
+        profileImage.image = image != nil
+        ? image
+        : UIImage(named: "pic_profile")
+        
         profileNickName.text = profile.nickname
         profileName.text = profile.name
         profileDateTime.text = profile.dateTime

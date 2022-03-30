@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE236AFE27F375A700D184C1 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE236AFD27F375A700D184C1 /* ImageService.swift */; };
 		CE655FAB27E257AF004FAFD0 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE655FAA27E257AF004FAFD0 /* SignUpViewController.swift */; };
 		CE811AB327E61DAD000C5229 /* MainListNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE811AB227E61DAD000C5229 /* MainListNavigationController.swift */; };
 		CE811AB527E88D16000C5229 /* MenuListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE811AB427E88D16000C5229 /* MenuListViewController.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE236AFD27F375A700D184C1 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		CE655FAA27E257AF004FAFD0 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		CE811AB227E61DAD000C5229 /* MainListNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListNavigationController.swift; sourceTree = "<group>"; };
 		CE811AB427E88D16000C5229 /* MenuListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListViewController.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 			children = (
 				CEE4EEF427F19F440086BBDA /* Database.swift */,
 				CEE4EEF627F1A5110086BBDA /* ProfileService.swift */,
+				CE236AFD27F375A700D184C1 /* ImageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 				CEE1627227C385A80084B87C /* AppDelegate.swift in Sources */,
 				CEE1627427C385A80084B87C /* SceneDelegate.swift in Sources */,
 				CE655FAB27E257AF004FAFD0 /* SignUpViewController.swift in Sources */,
+				CE236AFE27F375A700D184C1 /* ImageService.swift in Sources */,
 				CE811AB527E88D16000C5229 /* MenuListViewController.swift in Sources */,
 				CE811AB327E61DAD000C5229 /* MainListNavigationController.swift in Sources */,
 				CED8518827C4F697005C5C9A /* SignInViewController.swift in Sources */,

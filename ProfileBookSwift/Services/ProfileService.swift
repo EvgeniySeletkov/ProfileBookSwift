@@ -30,7 +30,9 @@ public class ProfileService {
     
     public func updateProfile(_ profile: ProfileModel){
         do {
-            try Database.shared.connection.run(_profilesTable.update(
+            let filter = _profilesTable.filter(_idExpression == profile.id)
+            
+            try Database.shared.connection.run(filter.update(
                 _imageExpression <- profile.image,
                 _nicknameExpression <- profile.nickname,
                 _nameExpression <- profile.name,
@@ -80,7 +82,7 @@ public class ProfileService {
     private func createTable() {
         do {
             try Database.shared.connection.run(_profilesTable.create(ifNotExists: true) { p in
-                p.column(_idExpression, primaryKey: true)
+                p.column(_idExpression, primaryKey: .autoincrement)
                 p.column(_imageExpression)
                 p.column(_nicknameExpression)
                 p.column(_nameExpression)
