@@ -1,0 +1,51 @@
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "7y1-Xc-9dt"; */
+"7y1-Xc-9dt.placeholder" = "Password";
+
+/* Class = "UITextField"; placeholder = "Name"; ObjectID = "8QZ-Iz-dAh"; */
+"8QZ-Iz-dAh.placeholder" = "Name";
+
+/* Class = "UIButton"; configuration.title = "SIGN UP"; ObjectID = "B4b-OW-Z9B"; */
+"B4b-OW-Z9B.configuration.title" = "SIGN UP";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "B4b-OW-Z9B"; */
+"B4b-OW-Z9B.normalTitle" = "Button";
+
+/* Class = "UITextField"; placeholder = "Confirm Password"; ObjectID = "BuM-W4-Kwk"; */
+"BuM-W4-Kwk.placeholder" = "Confirm Password";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Dab-gd-JJX"; */
+"Dab-gd-JJX.normalTitle" = "Button";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "Gmy-A6-gKd"; */
+"Gmy-A6-gKd.placeholder" = "Password";
+
+/* Class = "UINavigationItem"; title = "Add Profile"; ObjectID = "HYg-Yz-61p"; */
+"HYg-Yz-61p.title" = "Add Profile";
+
+/* Class = "UINavigationItem"; title = "Main List"; ObjectID = "ID8-dk-mGe"; */
+"ID8-dk-mGe.title" = "Main List";
+
+/* Class = "UIButton"; configuration.title = "SIGN IN"; ObjectID = "JMT-x1-hZ1"; */
+"JMT-x1-hZ1.configuration.title" = "SIGN IN";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "JMT-x1-hZ1"; */
+"JMT-x1-hZ1.normalTitle" = "Button";
+
+/* Class = "UINavigationItem"; title = "Users SignUp"; ObjectID = "L71-VD-y7m"; */
+"L71-VD-y7m.title" = "Users SignUp";
+
+/* Class = "UINavigationItem"; title = "Users SignIn"; ObjectID = "dkY-J8-8p9"; */
+"dkY-J8-8p9.title" = "Users SignIn";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "meF-y5-QKq"; */
+"meF-y5-QKq.normalTitle" = "Button";
+
+/* Class = "UITextField"; placeholder = "NickName"; ObjectID = "pkE-mP-et4"; */
+"pkE-mP-et4.placeholder" = "NickName";
+
+/* Class = "UITextField"; placeholder = "Login"; ObjectID = "vQ5-0J-obS"; */
+"vQ5-0J-obS.placeholder" = "Login";
+
+/* Class = "UITextField"; placeholder = "Login"; ObjectID = "xbA-MQ-66p"; */
+"xbA-MQ-66p.placeholder" = "Login";

@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  ProfileBookSwift
+
+  Created by User on 30.03.2022.
+  
+*/
+
+"NickNameOrNameFieldIsEmpty" = "NickName or Name field is empty!";
+"Camera" = "Camera";
+"Gallery" = "Gallery";
+"Cancel" = "Cancel";
+"Alert" = "Alert";
+"OK" = "OK";
+"AddPhoto" = "Add photo";
+"Edit" = "Edit";
+"Delete" = "Delete";
+"EditProfile" = "Edit Profile";

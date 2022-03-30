@@ -25,6 +25,7 @@ public class MainListViewController: UIViewController {
     }
     
     @IBAction func onLogOutTapped(_ sender: Any) {
+        
         let signInNC = storyboard?.instantiateViewController(withIdentifier: "SignInNavigationController") as! SignInNavigationController
 
         view.window?.rootViewController = signInNC
@@ -59,9 +60,10 @@ extension MainListViewController: UITableViewDataSource, UITableViewDelegate{
                                           actionProvider: {
             suggestedActions in
             
-            let editAction = UIAction(title: NSLocalizedString("Edit", comment: "")) { action in
+            let editAction = UIAction(title: NSLocalizedString(NSLocalizedString("Edit", comment: ""), comment: "")) { action in
                 let addEditVC = self.storyboard?.instantiateViewController(withIdentifier: "AddEditProfileViewController") as! AddEditProfileViewController
                 
+                addEditVC.title = NSLocalizedString("EditProfile", comment: "")
                 addEditVC.profile = self._profiles[indexPath.row]
                 self.show(addEditVC, sender: nil)
             }

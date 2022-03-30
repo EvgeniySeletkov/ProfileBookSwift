@@ -55,21 +55,22 @@ public class AddEditProfileViewController: UIViewController, UIImagePickerContro
             navigationController?.popViewController(animated: true)
         }
         else {
-            showAlert(message: "NickName or Name field is empty!")
+            showAlert(message: NSLocalizedString("NickNameOrNameFieldIsEmpty", comment: ""))
         }
     }
     
     @objc private func onImageTapped(sender: UITapGestureRecognizer) {
-        let alert = UIAlertController(title: "", message: "", preferredStyle: .actionSheet)
-        let cameraAction = UIAlertAction(title: "Camera", style: .default) { action in
+        let alert = UIAlertController(title: "", message: NSLocalizedString("AddPhoto", comment: ""), preferredStyle: .actionSheet)
+        
+        let cameraAction = UIAlertAction(title: NSLocalizedString("Camera", comment: ""), style: .default) { action in
             self._imagePicker.sourceType = .camera
             self.pickImage()
         }
-        let galleryAction = UIAlertAction(title: "Gallery", style: .default) { action in
+        let galleryAction = UIAlertAction(title: NSLocalizedString("Gallery", comment: ""), style: .default) { action in
             self._imagePicker.sourceType = .photoLibrary
             self.pickImage()
         }
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let cancelAction = UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel, handler: nil)
         
         alert.addAction(cameraAction)
         alert.addAction(galleryAction)
@@ -87,8 +88,8 @@ public class AddEditProfileViewController: UIViewController, UIImagePickerContro
     }
     
     private func showAlert(message: String) {
-        let alert = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
-        let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        let alert = UIAlertController(title: NSLocalizedString("Alert", comment: ""), message: message, preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .default, handler: nil)
         alert.addAction(alertAction)
         
         present(alert, animated: true, completion: nil)
