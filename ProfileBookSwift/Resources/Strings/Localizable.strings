@@ -16,3 +16,8 @@
 "Edit" = "Edit";
 "Delete" = "Delete";
 "EditProfile" = "Edit Profile";
+"ThisLoginIsBusy" = "This login is busy!";
+"PasswordsFieldsNotMatches" = "Password and confirm password fields are not matches!";
+"LoginIsInvalid" = "Login be at least 4 and no more than 16 and first symbol must not be a digit!";
+"PasswordIsInvalid" = "Password be at least 8 and no more than 16 and must contain at least one uppercase letter, one lowercase letter and one number!";
+"InvalidLoginOrPassword" = "Invalid login or password!";

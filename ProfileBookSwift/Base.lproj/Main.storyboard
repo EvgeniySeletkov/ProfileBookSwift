@@ -43,11 +43,17 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="334" height="34"/>
                                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="onLoginChanged:" destination="2qJ-fW-BGD" eventType="editingChanged" id="EZf-Ee-P9f"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7y1-Xc-9dt">
                                                 <rect key="frame" x="0.0" y="64" width="334" height="34"/>
                                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="onPasswordChanged:" destination="2qJ-fW-BGD" eventType="editingChanged" id="ACM-5T-dis"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -65,7 +71,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eSD-5K-Kt7">
                                         <rect key="frame" x="40" y="212.5" width="334" height="93.5"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JMT-x1-hZ1">
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JMT-x1-hZ1">
                                                 <rect key="frame" x="0.0" y="0.0" width="334" height="51"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="SIGN IN" buttonSize="large">
@@ -125,6 +131,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="Users SignIn" id="dkY-J8-8p9"/>
                     <connections>
+                        <outlet property="loginTextField" destination="vQ5-0J-obS" id="v0h-pE-cvL"/>
+                        <outlet property="passwordTextField" destination="7y1-Xc-9dt" id="mdj-Bv-RMf"/>
+                        <outlet property="signInButton" destination="JMT-x1-hZ1" id="NJD-3K-N7w"/>
                         <segue destination="3tO-hP-V9e" kind="show" identifier="goToSignUp" id="2TK-72-5nq"/>
                     </connections>
                 </viewController>
@@ -286,16 +295,25 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="334" height="34"/>
                                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="onLoginChanged:" destination="3tO-hP-V9e" eventType="editingChanged" id="UHA-eW-AI4"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gmy-A6-gKd">
                                                 <rect key="frame" x="0.0" y="64" width="334" height="34"/>
                                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="onPasswordChanged:" destination="3tO-hP-V9e" eventType="editingChanged" id="nY3-45-uRu"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BuM-W4-Kwk">
                                                 <rect key="frame" x="0.0" y="128" width="334" height="34"/>
                                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="onConfirmPasswordChanged:" destination="3tO-hP-V9e" eventType="editingChanged" id="lBD-Rf-Zqg"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -310,7 +328,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c6w-vO-iXn">
                                 <rect key="frame" x="0.0" y="536" width="414" height="326"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B4b-OW-Z9B">
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B4b-OW-Z9B">
                                         <rect key="frame" x="40" y="255" width="334" height="51"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="SIGN UP" buttonSize="large">
@@ -345,6 +363,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Users SignUp" id="L71-VD-y7m"/>
+                    <connections>
+                        <outlet property="confirmPasswordTextField" destination="BuM-W4-Kwk" id="OBx-Oj-Jce"/>
+                        <outlet property="loginTextField" destination="xbA-MQ-66p" id="qbN-ZJ-6nR"/>
+                        <outlet property="passwordTextField" destination="Gmy-A6-gKd" id="Che-E7-8Rh"/>
+                        <outlet property="signUpButton" destination="B4b-OW-Z9B" id="fIs-9h-39T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IvL-Wt-PNu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -39,11 +39,15 @@ public class AddEditProfileViewController: UIViewController, UIImagePickerContro
         profile.nickname = nicknameTextField.text!
         profile.name = nameTextField.text!
         profile.description = descriptionTextView.text
-        profile.dateTime = "Today"
         profile.userId = 1
         
         if !hasEmptyFields() {
             if profile.id == 0 {
+                let dateTime = Date()
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "dd/MM/yyyy HH:mm aa"
+                profile.dateTime = dateFormatter.string(from: dateTime)
+                
                 ProfileService.shared.addProfile(profile)
             }
             else {

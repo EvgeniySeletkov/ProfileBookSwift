@@ -18,6 +18,8 @@
 		CE95D39527E8F0D8001791CB /* AddEditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE95D39427E8F0D8001791CB /* AddEditProfileViewController.swift */; };
 		CED8518827C4F697005C5C9A /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED8518727C4F697005C5C9A /* SignInViewController.swift */; };
 		CED9D1E127F4B9000074185C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CED9D1E027F4B9000074185C /* Localizable.strings */; };
+		CED9D1E327F593EA0074185C /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9D1E227F593EA0074185C /* UserModel.swift */; };
+		CED9D1E527F5947F0074185C /* AuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9D1E427F5947F0074185C /* AuthorizationService.swift */; };
 		CEE1627227C385A80084B87C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE1627127C385A80084B87C /* AppDelegate.swift */; };
 		CEE1627427C385A80084B87C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE1627327C385A80084B87C /* SceneDelegate.swift */; };
 		CEE1627927C385A80084B87C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEE1627727C385A80084B87C /* Main.storyboard */; };
@@ -61,6 +63,8 @@
 		CED8518727C4F697005C5C9A /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		CED9D1D427F4B0280074185C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		CED9D1E027F4B9000074185C /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		CED9D1E227F593EA0074185C /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		CED9D1E427F5947F0074185C /* AuthorizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationService.swift; sourceTree = "<group>"; };
 		CEE1626E27C385A80084B87C /* ProfileBookSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProfileBookSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE1627127C385A80084B87C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEE1627327C385A80084B87C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				CE811ABF27E8AEC3000C5229 /* ProfileModel.swift */,
+				CED9D1E227F593EA0074185C /* UserModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -210,6 +215,7 @@
 				CEE4EEF427F19F440086BBDA /* Database.swift */,
 				CEE4EEF627F1A5110086BBDA /* ProfileService.swift */,
 				CE236AFD27F375A700D184C1 /* ImageService.swift */,
+				CED9D1E427F5947F0074185C /* AuthorizationService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -361,8 +367,10 @@
 				CE655FAB27E257AF004FAFD0 /* SignUpViewController.swift in Sources */,
 				CE236AFE27F375A700D184C1 /* ImageService.swift in Sources */,
 				CE811AB527E88D16000C5229 /* MainListViewController.swift in Sources */,
+				CED9D1E327F593EA0074185C /* UserModel.swift in Sources */,
 				CE811AB327E61DAD000C5229 /* MainListNavigationController.swift in Sources */,
 				CED8518827C4F697005C5C9A /* SignInViewController.swift in Sources */,
+				CED9D1E527F5947F0074185C /* AuthorizationService.swift in Sources */,
 				CE811AC027E8AEC3000C5229 /* ProfileModel.swift in Sources */,
 				CE95D39527E8F0D8001791CB /* AddEditProfileViewController.swift in Sources */,
 				CEE4EEF727F1A5110086BBDA /* ProfileService.swift in Sources */,
