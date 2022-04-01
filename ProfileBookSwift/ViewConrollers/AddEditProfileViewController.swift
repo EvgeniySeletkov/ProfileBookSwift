@@ -39,7 +39,6 @@ public class AddEditProfileViewController: UIViewController, UIImagePickerContro
         profile.nickname = nicknameTextField.text!
         profile.name = nameTextField.text!
         profile.description = descriptionTextView.text
-        profile.userId = 1
         
         if !hasEmptyFields() {
             if profile.id == 0 {

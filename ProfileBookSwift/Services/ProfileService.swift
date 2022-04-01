@@ -1,27 +1,28 @@
 import Foundation
 import SQLite
-import CoreText
 
 public class ProfileService {
-    fileprivate let _profilesTable = Table("profiles")
+    private let _profilesTable = Table("profiles")
     
-    fileprivate let _idExpression = Expression<Int>("id")
-    fileprivate let _imageExpression = Expression<String>("image")
-    fileprivate let _nicknameExpression = Expression<String>("nickname")
-    fileprivate let _nameExpression = Expression<String>("name")
-    fileprivate let _descriptionExpression = Expression<String>("description")
-    fileprivate let _dateTimeExpression = Expression<String>("dateTime")
-    fileprivate let _userIdExpression = Expression<Int>("userId")
+    private let _idExpression = Expression<Int>("id")
+    private let _imageExpression = Expression<String>("image")
+    private let _nicknameExpression = Expression<String>("nickname")
+    private let _nameExpression = Expression<String>("name")
+    private let _descriptionExpression = Expression<String>("description")
+    private let _dateTimeExpression = Expression<String>("dateTime")
+    private let _userIdExpression = Expression<Int>("userId")
     
     public static let shared = ProfileService()
     
-    private init() {
+    init() {
         createTable()
     }
     
     public func addProfile(_ profile: ProfileModel){
         do {
-            try Database.shared.connection.run(_profilesTable.insert(_imageExpression <- profile.image, _nicknameExpression <- profile.nickname, _nameExpression <- profile.name, _descriptionExpression <- profile.description, _dateTimeExpression <- profile.dateTime, _userIdExpression <- profile.userId))
+            let userId = SettingsManager.shared.userId
+            
+            try Database.shared.connection.run(_profilesTable.insert(_imageExpression <- profile.image, _nicknameExpression <- profile.nickname, _nameExpression <- profile.name, _descriptionExpression <- profile.description, _dateTimeExpression <- profile.dateTime, _userIdExpression <- userId))
         }
         catch {
             print(error)
@@ -59,7 +60,7 @@ public class ProfileService {
         var result = [ProfileModel]()
         
         do {
-            let filter = _profilesTable.filter(_userIdExpression == 1)
+            let filter = _profilesTable.filter(_userIdExpression == SettingsManager.shared.userId)
             
             for profile in try Database.shared.connection.prepare(filter) {
                 result.append(ProfileModel(

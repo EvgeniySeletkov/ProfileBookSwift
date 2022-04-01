@@ -19,12 +19,17 @@ public class MainListViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(onUpdateProfileList(notification:)), name: Notification.Name("SaveProfile"), object: nil)
     }
     
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     @objc func onUpdateProfileList(notification: Notification) {
         _profiles = ProfileService.shared.getProfilesByUserId()
         tableView.reloadData()
     }
     
     @IBAction func onLogOutTapped(_ sender: Any) {
+        AuthorizationService.shared.logOut()
         
         let signInNC = storyboard?.instantiateViewController(withIdentifier: "SignInNavigationController") as! SignInNavigationController
 

@@ -8,6 +8,16 @@ public class SignInViewController: UIViewController {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(onSignedUp(notification:)), name: Notification.Name("SignUp"), object: nil)
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    @objc func onSignedUp(notification: Notification) {
+        loginTextField.text = notification.object as? String
     }
     
     @IBAction func onLoginChanged(_ sender: Any) {
@@ -22,6 +32,8 @@ public class SignInViewController: UIViewController {
         let isAuthorized = AuthorizationService.shared.signIn(login: loginTextField.text!, password: passwordTextField.text!)
         
         if isAuthorized {
+            NotificationCenter.default.removeObserver(self)
+            
             let mainListNC = storyboard?.instantiateViewController(withIdentifier: "MainListNavigationController") as! MainListNavigationController
 
             view.window?.rootViewController = mainListNC

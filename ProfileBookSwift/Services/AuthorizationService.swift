@@ -2,17 +2,19 @@ import Foundation
 import SQLite
 
 public class AuthorizationService {
-    fileprivate let _usersTable = Table("users")
+    private let _usersTable = Table("users")
     
-    fileprivate let _idExpression = Expression<Int>("id")
-    fileprivate let _loginExpression = Expression<String>("login")
-    fileprivate let _passwordExpression = Expression<String>("password")
+    private let _idExpression = Expression<Int>("id")
+    private let _loginExpression = Expression<String>("login")
+    private let _passwordExpression = Expression<String>("password")
     
     public static let shared = AuthorizationService()
     
-    private init() {
+    init() {
         createTable()
     }
+    
+    public var isAuthorized = SettingsManager.shared.userId != 0
     
     public func checkIsUserExist(login: String) -> Bool {
         var result = false
@@ -38,6 +40,7 @@ public class AuthorizationService {
             for user in try Database.shared.connection.prepare(_usersTable) {
                 if user[_loginExpression] == login && user[_passwordExpression] == password {
                     result = true
+                    SettingsManager.shared.userId = user[_idExpression]
                 }
             }
         }
@@ -55,6 +58,10 @@ public class AuthorizationService {
         catch {
             print(error)
         }
+    }
+    
+    public func logOut() {
+        SettingsManager.shared.clearSettings()
     }
     
     private func createTable() {

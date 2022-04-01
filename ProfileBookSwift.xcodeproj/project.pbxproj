@@ -31,6 +31,7 @@
 		CEE4EEF227F19D930086BBDA /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = CEE4EEF127F19D930086BBDA /* SQLite */; };
 		CEE4EEF527F19F440086BBDA /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE4EEF427F19F440086BBDA /* Database.swift */; };
 		CEE4EEF727F1A5110086BBDA /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE4EEF627F1A5110086BBDA /* ProfileService.swift */; };
+		CEEF324B27F70739009757E7 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEF324A27F70739009757E7 /* SettingsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		CEE1629427C385AB0084B87C /* ProfileBookSwiftUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileBookSwiftUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CEE4EEF427F19F440086BBDA /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		CEE4EEF627F1A5110086BBDA /* ProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileService.swift; sourceTree = "<group>"; };
+		CEEF324A27F70739009757E7 /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +218,7 @@
 				CEE4EEF627F1A5110086BBDA /* ProfileService.swift */,
 				CE236AFD27F375A700D184C1 /* ImageService.swift */,
 				CED9D1E427F5947F0074185C /* AuthorizationService.swift */,
+				CEEF324A27F70739009757E7 /* SettingsManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 				CE811AB327E61DAD000C5229 /* MainListNavigationController.swift in Sources */,
 				CED8518827C4F697005C5C9A /* SignInViewController.swift in Sources */,
 				CED9D1E527F5947F0074185C /* AuthorizationService.swift in Sources */,
+				CEEF324B27F70739009757E7 /* SettingsManager.swift in Sources */,
 				CE811AC027E8AEC3000C5229 /* ProfileModel.swift in Sources */,
 				CE95D39527E8F0D8001791CB /* AddEditProfileViewController.swift in Sources */,
 				CEE4EEF727F1A5110086BBDA /* ProfileService.swift in Sources */,

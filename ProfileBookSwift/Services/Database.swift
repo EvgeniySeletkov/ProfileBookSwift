@@ -4,9 +4,9 @@ import SQLite
 public class Database {
     public static let shared = Database()
     
-    public fileprivate (set) var connection: Connection!
+    public private (set) var connection: Connection!
     
-    private init(){
+    init(){
         connect()
     }
     

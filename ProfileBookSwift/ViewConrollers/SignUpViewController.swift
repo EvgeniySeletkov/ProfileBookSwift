@@ -33,6 +33,8 @@ public class SignUpViewController: UIViewController {
                         password: passwordTextField.text!)
 
                     AuthorizationService.shared.signUp(user: user)
+                    
+                    NotificationCenter.default.post(name: Notification.Name("SignUp"), object: loginTextField.text)
 
                     navigationController?.popViewController(animated: true)
                 }
