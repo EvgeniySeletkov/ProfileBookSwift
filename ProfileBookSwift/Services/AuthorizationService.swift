@@ -39,8 +39,8 @@ public class AuthorizationService {
         do {
             for user in try Database.shared.connection.prepare(_usersTable) {
                 if user[_loginExpression] == login && user[_passwordExpression] == password {
-                    result = true
                     SettingsManager.shared.userId = user[_idExpression]
+                    result = true
                 }
             }
         }
