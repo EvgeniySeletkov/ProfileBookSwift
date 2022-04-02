@@ -14,9 +14,9 @@ public class MainListViewController: UIViewController {
         
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.register(UINib(nibName: "ProfileViewCell", bundle: nil), forCellReuseIdentifier: "ProfileViewCell")
+        tableView.register(UINib(nibName: Constants.PROFILE_VIEW_CELL, bundle: nil), forCellReuseIdentifier: Constants.PROFILE_VIEW_CELL)
         
-        NotificationCenter.default.addObserver(self, selector: #selector(onUpdateProfileList(notification:)), name: Notification.Name("SaveProfile"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(onUpdateProfileList(notification:)), name: Notification.Name(Constants.NotificationCenter.SAVE_PROFILE), object: nil)
     }
     
     deinit {
@@ -31,14 +31,14 @@ public class MainListViewController: UIViewController {
     @IBAction func onLogOutTapped(_ sender: Any) {
         AuthorizationService.shared.logOut()
         
-        let signInNC = storyboard?.instantiateViewController(withIdentifier: "SignInNavigationController") as! SignInNavigationController
+        let signInNC = storyboard?.instantiateViewController(withIdentifier: Constants.ViewControllers.SIGN_IN_NAVIGATION_CONTROLLER) as! SignInNavigationController
 
         view.window?.rootViewController = signInNC
         view.window?.makeKeyAndVisible()
     }
     
     @IBAction func onAddProfileTapped(_ sender: Any) {
-        performSegue(withIdentifier: "goToAddEditProfile", sender: nil)
+        performSegue(withIdentifier: Constants.Navigation.GO_TO_ADD_EDIT_PROFILE, sender: nil)
     }
 }
 
@@ -48,7 +48,7 @@ extension MainListViewController: UITableViewDataSource, UITableViewDelegate{
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileViewCell", for: indexPath) as! ProfileViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.PROFILE_VIEW_CELL, for: indexPath) as! ProfileViewCell
         
         let profile = _profiles[indexPath.row]
         cell.setProfile(profile: profile)
@@ -66,7 +66,7 @@ extension MainListViewController: UITableViewDataSource, UITableViewDelegate{
             suggestedActions in
             
             let editAction = UIAction(title: NSLocalizedString(NSLocalizedString("Edit", comment: ""), comment: "")) { action in
-                let addEditVC = self.storyboard?.instantiateViewController(withIdentifier: "AddEditProfileViewController") as! AddEditProfileViewController
+                let addEditVC = self.storyboard?.instantiateViewController(withIdentifier: Constants.ViewControllers.ADD_EDIT_PROFILE_VIEW_CONTROLLER) as! AddEditProfileViewController
                 
                 addEditVC.title = NSLocalizedString("EditProfile", comment: "")
                 addEditVC.profile = self._profiles[indexPath.row]

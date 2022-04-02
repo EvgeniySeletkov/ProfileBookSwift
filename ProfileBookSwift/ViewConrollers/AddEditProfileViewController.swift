@@ -44,7 +44,7 @@ public class AddEditProfileViewController: UIViewController, UIImagePickerContro
             if profile.id == 0 {
                 let dateTime = Date()
                 let dateFormatter = DateFormatter()
-                dateFormatter.dateFormat = "dd/MM/yyyy HH:mm aa"
+                dateFormatter.dateFormat = Constants.DATE_PATTERN
                 profile.dateTime = dateFormatter.string(from: dateTime)
                 
                 ProfileService.shared.addProfile(profile)
@@ -53,7 +53,7 @@ public class AddEditProfileViewController: UIViewController, UIImagePickerContro
                 ProfileService.shared.updateProfile(profile)
             }
             
-            NotificationCenter.default.post(name: Notification.Name("SaveProfile"), object: true)
+            NotificationCenter.default.post(name: Notification.Name(Constants.NotificationCenter.SAVE_PROFILE), object: true)
             
             navigationController?.popViewController(animated: true)
         }

@@ -9,7 +9,7 @@ public class SignInViewController: UIViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(onSignedUp(notification:)), name: Notification.Name("SignUp"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(onSignedUp(notification:)), name: Notification.Name(Constants.NotificationCenter.SIGN_UP), object: nil)
     }
     
     deinit {
@@ -34,7 +34,7 @@ public class SignInViewController: UIViewController {
         if isAuthorized {
             NotificationCenter.default.removeObserver(self)
             
-            let mainListNC = storyboard?.instantiateViewController(withIdentifier: "MainListNavigationController") as! MainListNavigationController
+            let mainListNC = storyboard?.instantiateViewController(withIdentifier: Constants.ViewControllers.MAIN_LIST_NAVIGATION_CONTROLLER) as! MainListNavigationController
 
             view.window?.rootViewController = mainListNC
             view.window?.makeKeyAndVisible()
@@ -45,7 +45,7 @@ public class SignInViewController: UIViewController {
     }
     
     @IBAction func onSignUpTapped(_ sender: Any) {
-        performSegue(withIdentifier: "goToSignUp", sender: nil)
+        performSegue(withIdentifier: Constants.Navigation.GO_TO_SIGN_UP, sender: nil)
     }
     
     private func checkFieldsAreEmpty() -> Bool {

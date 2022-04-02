@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CE236AFE27F375A700D184C1 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE236AFD27F375A700D184C1 /* ImageService.swift */; };
+		CE32FC5927F84E3500C6BF01 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE32FC5827F84E3500C6BF01 /* Constants.swift */; };
 		CE655FAB27E257AF004FAFD0 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE655FAA27E257AF004FAFD0 /* SignUpViewController.swift */; };
 		CE79A35427F48E2500587F7D /* SignInNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE79A35327F48E2500587F7D /* SignInNavigationController.swift */; };
 		CE811AB327E61DAD000C5229 /* MainListNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE811AB227E61DAD000C5229 /* MainListNavigationController.swift */; };
@@ -53,6 +54,7 @@
 
 /* Begin PBXFileReference section */
 		CE236AFD27F375A700D184C1 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
+		CE32FC5827F84E3500C6BF01 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CE655FAA27E257AF004FAFD0 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		CE79A35327F48E2500587F7D /* SignInNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInNavigationController.swift; sourceTree = "<group>"; };
 		CE811AB227E61DAD000C5229 /* MainListNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListNavigationController.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 				CEE1627A27C385AA0084B87C /* Assets.xcassets */,
 				CEE1627C27C385AA0084B87C /* LaunchScreen.storyboard */,
 				CEE1627F27C385AA0084B87C /* Info.plist */,
+				CE32FC5827F84E3500C6BF01 /* Constants.swift */,
 			);
 			path = ProfileBookSwift;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE811ABB27E88FE9000C5229 /* ProfileViewCell.swift in Sources */,
+				CE32FC5927F84E3500C6BF01 /* Constants.swift in Sources */,
 				CE79A35427F48E2500587F7D /* SignInNavigationController.swift in Sources */,
 				CEE4EEF527F19F440086BBDA /* Database.swift in Sources */,
 				CEE1627227C385A80084B87C /* AppDelegate.swift in Sources */,
