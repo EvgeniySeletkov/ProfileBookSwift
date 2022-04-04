@@ -182,16 +182,30 @@
                                     <action selector="onAddProfileTapped:" destination="bRr-cy-ieK" eventType="touchUpInside" id="EjH-mq-Mx5"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7P0-uI-fD9">
+                                <rect key="frame" x="40" y="464.5" width="334" height="21"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No profiles" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tlq-Pk-wtj">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="21"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="s81-Wv-Cnc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6co-1V-rZy" firstAttribute="leading" secondItem="s81-Wv-Cnc" secondAttribute="leading" id="6qC-nc-13t"/>
+                            <constraint firstItem="7P0-uI-fD9" firstAttribute="leading" secondItem="s81-Wv-Cnc" secondAttribute="leading" constant="40" id="AeJ-3Z-Tdl"/>
+                            <constraint firstItem="s81-Wv-Cnc" firstAttribute="trailing" secondItem="7P0-uI-fD9" secondAttribute="trailing" constant="40" id="Eq9-fz-DKU"/>
                             <constraint firstItem="s81-Wv-Cnc" firstAttribute="bottom" secondItem="6co-1V-rZy" secondAttribute="bottom" id="GhP-Aw-1CZ"/>
                             <constraint firstItem="s81-Wv-Cnc" firstAttribute="bottom" secondItem="meF-y5-QKq" secondAttribute="bottom" constant="16" id="Gri-UO-dc1"/>
                             <constraint firstItem="s81-Wv-Cnc" firstAttribute="trailing" secondItem="6co-1V-rZy" secondAttribute="trailing" id="KJA-j3-GQl"/>
                             <constraint firstItem="s81-Wv-Cnc" firstAttribute="trailing" secondItem="meF-y5-QKq" secondAttribute="trailing" constant="16" id="PMj-D5-dpn"/>
                             <constraint firstItem="6co-1V-rZy" firstAttribute="top" secondItem="s81-Wv-Cnc" secondAttribute="top" id="TaE-hN-dwh"/>
+                            <constraint firstItem="7P0-uI-fD9" firstAttribute="centerY" secondItem="6co-1V-rZy" secondAttribute="centerY" id="oYd-mE-0yS"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Main List" id="ID8-dk-mGe">
@@ -203,13 +217,14 @@
                     </navigationItem>
                     <connections>
                         <outlet property="addButton" destination="meF-y5-QKq" id="3Vn-9u-drl"/>
+                        <outlet property="noProfilesLabel" destination="tlq-Pk-wtj" id="3Gd-qO-MO8"/>
                         <outlet property="tableView" destination="6co-1V-rZy" id="Ncm-rV-PyS"/>
                         <segue destination="Ptt-eM-QAD" kind="show" identifier="goToAddEditProfile" id="iTa-0q-luQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HmS-ne-gnN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="162" y="-314"/>
+            <point key="canvasLocation" x="160.86956521739131" y="-314.0625"/>
         </scene>
         <!--Add Profile-->
         <scene sceneID="z0B-iB-Gut">

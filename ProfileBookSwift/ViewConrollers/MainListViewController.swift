@@ -5,6 +5,7 @@ public class MainListViewController: UIViewController {
     
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var noProfilesLabel: UILabel!
     
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,6 +18,8 @@ public class MainListViewController: UIViewController {
         tableView.register(UINib(nibName: Constants.PROFILE_VIEW_CELL, bundle: nil), forCellReuseIdentifier: Constants.PROFILE_VIEW_CELL)
         
         NotificationCenter.default.addObserver(self, selector: #selector(onUpdateProfileList(notification:)), name: Notification.Name(Constants.NotificationCenter.SAVE_PROFILE), object: nil)
+        
+        noProfilesLabel.isHidden = !_profiles.isEmpty
     }
     
     deinit {
@@ -26,6 +29,8 @@ public class MainListViewController: UIViewController {
     @objc func onUpdateProfileList(notification: Notification) {
         _profiles = ProfileService.shared.getProfilesByUserId()
         tableView.reloadData()
+        
+        noProfilesLabel.isHidden = !_profiles.isEmpty
     }
     
     @IBAction func onLogOutTapped(_ sender: Any) {
@@ -77,6 +82,7 @@ extension MainListViewController: UITableViewDataSource, UITableViewDelegate{
                 self.deleteProfileByIndex(index: indexPath.row)
                 
                 tableView.reloadData()
+                self.noProfilesLabel.isHidden = !self._profiles.isEmpty
             }
             
             return UIMenu(title: "", children: [editAction, deleteAction])
