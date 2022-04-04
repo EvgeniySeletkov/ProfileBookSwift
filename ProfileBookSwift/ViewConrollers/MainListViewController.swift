@@ -34,16 +34,31 @@ public class MainListViewController: UIViewController {
     }
     
     @IBAction func onLogOutTapped(_ sender: Any) {
+        let alert = UIAlertController(title: NSLocalizedString("Alert", comment: ""), message: NSLocalizedString("LogOutAlertMessage", comment: ""), preferredStyle: .alert)
+        
+        let noAction = UIAlertAction(title: NSLocalizedString("No", comment: ""), style: .cancel, handler: nil)
+        
+        let yesAction = UIAlertAction(title: NSLocalizedString("Yes", comment: ""), style: .default) { action in
+            self.logOut()
+        }
+        
+        alert.addAction(noAction)
+        alert.addAction(yesAction)
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func onAddProfileTapped(_ sender: Any) {
+        performSegue(withIdentifier: Constants.Navigation.GO_TO_ADD_EDIT_PROFILE, sender: nil)
+    }
+    
+    private func logOut() {
         AuthorizationService.shared.logOut()
         
         let signInNC = storyboard?.instantiateViewController(withIdentifier: Constants.ViewControllers.SIGN_IN_NAVIGATION_CONTROLLER) as! SignInNavigationController
 
         view.window?.rootViewController = signInNC
         view.window?.makeKeyAndVisible()
-    }
-    
-    @IBAction func onAddProfileTapped(_ sender: Any) {
-        performSegue(withIdentifier: Constants.Navigation.GO_TO_ADD_EDIT_PROFILE, sender: nil)
     }
 }
 

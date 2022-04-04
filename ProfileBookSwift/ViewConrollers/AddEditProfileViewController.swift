@@ -41,21 +41,18 @@ public class AddEditProfileViewController: UIViewController, UIImagePickerContro
         profile.description = descriptionTextView.text
         
         if !hasEmptyFields() {
-            if profile.id == 0 {
-                let dateTime = Date()
-                let dateFormatter = DateFormatter()
-                dateFormatter.dateFormat = Constants.DATE_PATTERN
-                profile.dateTime = dateFormatter.string(from: dateTime)
-                
-                ProfileService.shared.addProfile(profile)
-            }
-            else {
-                ProfileService.shared.updateProfile(profile)
+            let alert = UIAlertController(title: NSLocalizedString("Alert", comment: ""), message: NSLocalizedString("SaveProfileAlertMessage", comment: ""), preferredStyle: .alert)
+            
+            let noAction = UIAlertAction(title: NSLocalizedString("No", comment: ""), style: .cancel, handler: nil)
+            
+            let yesAction = UIAlertAction(title: NSLocalizedString("Yes", comment: ""), style: .default) { action in
+                self.saveProfile()
             }
             
-            NotificationCenter.default.post(name: Notification.Name(Constants.NotificationCenter.SAVE_PROFILE), object: true)
+            alert.addAction(noAction)
+            alert.addAction(yesAction)
             
-            navigationController?.popViewController(animated: true)
+            present(alert, animated: true, completion: nil)
         }
         else {
             showAlert(message: NSLocalizedString("NickNameOrNameFieldIsEmpty", comment: ""))
@@ -84,6 +81,24 @@ public class AddEditProfileViewController: UIViewController, UIImagePickerContro
     
     private func pickImage() {
         present(_imagePicker, animated: true, completion: nil)
+    }
+    
+    private func saveProfile() {
+        if profile.id == 0 {
+            let dateTime = Date()
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = Constants.DATE_PATTERN
+            profile.dateTime = dateFormatter.string(from: dateTime)
+            
+            ProfileService.shared.addProfile(profile)
+        }
+        else {
+            ProfileService.shared.updateProfile(profile)
+        }
+        
+        NotificationCenter.default.post(name: Notification.Name(Constants.NotificationCenter.SAVE_PROFILE), object: true)
+        
+        navigationController?.popViewController(animated: true)
     }
     
     private func hasEmptyFields() -> Bool {

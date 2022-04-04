@@ -21,3 +21,7 @@
 "LoginIsInvalid" = "Login be at least 4 and no more than 16 and first symbol must not be a digit!";
 "PasswordIsInvalid" = "Password be at least 8 and no more than 16 and must contain at least one uppercase letter, one lowercase letter and one number!";
 "InvalidLoginOrPassword" = "Invalid login or password!";
+"SaveProfileAlertMessage" = "Are you sure you want to save profile?";
+"Yes" = "Yes";
+"No" = "No";
+"LogOutAlertMessage" = "Are you sure you want to logout?";
