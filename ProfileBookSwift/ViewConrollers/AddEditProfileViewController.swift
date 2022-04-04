@@ -40,7 +40,7 @@ public class AddEditProfileViewController: UIViewController, UIImagePickerContro
         profile.name = nameTextField.text!
         profile.description = descriptionTextView.text
         
-        if !hasEmptyFields() {
+        if !checkAreFieldsEmpty() {
             let alert = UIAlertController(title: NSLocalizedString("Alert", comment: ""), message: NSLocalizedString("SaveProfileAlertMessage", comment: ""), preferredStyle: .alert)
             
             let noAction = UIAlertAction(title: NSLocalizedString("No", comment: ""), style: .cancel, handler: nil)
@@ -101,7 +101,7 @@ public class AddEditProfileViewController: UIViewController, UIImagePickerContro
         navigationController?.popViewController(animated: true)
     }
     
-    private func hasEmptyFields() -> Bool {
+    private func checkAreFieldsEmpty() -> Bool {
         return nicknameTextField.text!.isEmpty || nameTextField.text!.isEmpty
     }
     

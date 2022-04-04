@@ -21,11 +21,11 @@ public class SignInViewController: UIViewController {
     }
     
     @IBAction func onLoginChanged(_ sender: Any) {
-        signInButton.isEnabled = !checkFieldsAreEmpty()
+        signInButton.isEnabled = !checkAreFieldsEmpty()
     }
     
     @IBAction func onPasswordChanged(_ sender: Any) {
-        signInButton.isEnabled = !checkFieldsAreEmpty()
+        signInButton.isEnabled = !checkAreFieldsEmpty()
     }
     
     @IBAction func onSignInTapped(_ sender: Any) {
@@ -48,7 +48,7 @@ public class SignInViewController: UIViewController {
         performSegue(withIdentifier: Constants.Navigation.GO_TO_SIGN_UP, sender: nil)
     }
     
-    private func checkFieldsAreEmpty() -> Bool {
+    private func checkAreFieldsEmpty() -> Bool {
         return loginTextField.text!.isEmpty
         || passwordTextField.text!.isEmpty
     }

@@ -11,19 +11,19 @@ public class SignUpViewController: UIViewController {
     }
     
     @IBAction func onLoginChanged(_ sender: Any) {
-        signUpButton.isEnabled = !checkFieldsAreEmpty()
+        signUpButton.isEnabled = !checkAreFieldsEmpty()
     }
     
     @IBAction func onPasswordChanged(_ sender: Any) {
-        signUpButton.isEnabled = !checkFieldsAreEmpty()
+        signUpButton.isEnabled = !checkAreFieldsEmpty()
     }
     
     @IBAction func onConfirmPasswordChanged(_ sender: Any) {
-        signUpButton.isEnabled = !checkFieldsAreEmpty()
+        signUpButton.isEnabled = !checkAreFieldsEmpty()
     }
     
     @IBAction func onSignUpTapped(_ sender: Any) {
-        if checkIsLogin() && checkIsPassword() {
+        if checkIsLoginValid() && checkIsPasswordValid() {
             if passwordTextField.text == confirmPasswordTextField.text {
                 let isUserExist = AuthorizationService.shared.checkIsUserExist(login: loginTextField.text!)
 
@@ -48,13 +48,13 @@ public class SignUpViewController: UIViewController {
         }
     }
     
-    private func checkFieldsAreEmpty() -> Bool {
+    private func checkAreFieldsEmpty() -> Bool {
         return loginTextField.text!.isEmpty
         || passwordTextField.text!.isEmpty
         || confirmPasswordTextField.text!.isEmpty
     }
     
-    private func checkIsLogin() -> Bool {
+    private func checkIsLoginValid() -> Bool {
         var result = false
         
         let predicate = NSPredicate(format:"SELF MATCHES %@", "^[A-Za-z][A-Za-z\\d]{3,15}")
@@ -69,7 +69,7 @@ public class SignUpViewController: UIViewController {
         return result
     }
     
-    private func checkIsPassword() -> Bool {
+    private func checkIsPasswordValid() -> Bool {
         var result = false
         
         let predicate = NSPredicate(format:"SELF MATCHES %@", "^[A-Z](?=.*[a-z])(?=.*\\d)[a-zA-Z\\d]{7,15}")
