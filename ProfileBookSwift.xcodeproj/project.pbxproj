@@ -17,6 +17,7 @@
 		CE811ABC27E88FE9000C5229 /* ProfileViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE811ABA27E88FE9000C5229 /* ProfileViewCell.xib */; };
 		CE811AC027E8AEC3000C5229 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE811ABF27E8AEC3000C5229 /* ProfileModel.swift */; };
 		CE95D39527E8F0D8001791CB /* AddEditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE95D39427E8F0D8001791CB /* AddEditProfileViewController.swift */; };
+		CED357912827D73600A88FD3 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED357902827D73600A88FD3 /* Validator.swift */; };
 		CED8518827C4F697005C5C9A /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED8518727C4F697005C5C9A /* SignInViewController.swift */; };
 		CED9D1E127F4B9000074185C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CED9D1E027F4B9000074185C /* Localizable.strings */; };
 		CED9D1E327F593EA0074185C /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9D1E227F593EA0074185C /* UserModel.swift */; };
@@ -63,6 +64,7 @@
 		CE811ABA27E88FE9000C5229 /* ProfileViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewCell.xib; sourceTree = "<group>"; };
 		CE811ABF27E8AEC3000C5229 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		CE95D39427E8F0D8001791CB /* AddEditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditProfileViewController.swift; sourceTree = "<group>"; };
+		CED357902827D73600A88FD3 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		CED8518727C4F697005C5C9A /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		CED9D1D427F4B0280074185C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		CED9D1E027F4B9000074185C /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
@@ -129,6 +131,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		CED3578F2827D6E200A88FD3 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CED357902827D73600A88FD3 /* Validator.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		CED8518627C4F64E005C5C9A /* ViewConrollers */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +191,7 @@
 		CEE1627027C385A80084B87C /* ProfileBookSwift */ = {
 			isa = PBXGroup;
 			children = (
+				CED3578F2827D6E200A88FD3 /* Helpers */,
 				CED9D1D527F4B5050074185C /* Resources */,
 				CEE4EEF327F19F0C0086BBDA /* Services */,
 				CE811ABE27E8AE98000C5229 /* Models */,
@@ -375,6 +386,7 @@
 				CE236AFE27F375A700D184C1 /* ImageService.swift in Sources */,
 				CE811AB527E88D16000C5229 /* MainListViewController.swift in Sources */,
 				CED9D1E327F593EA0074185C /* UserModel.swift in Sources */,
+				CED357912827D73600A88FD3 /* Validator.swift in Sources */,
 				CE811AB327E61DAD000C5229 /* MainListNavigationController.swift in Sources */,
 				CED8518827C4F697005C5C9A /* SignInViewController.swift in Sources */,
 				CED9D1E527F5947F0074185C /* AuthorizationService.swift in Sources */,

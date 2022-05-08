@@ -57,9 +57,7 @@ public class SignUpViewController: UIViewController {
     private func checkIsLoginValid() -> Bool {
         var result = false
         
-        let predicate = NSPredicate(format:"SELF MATCHES %@", "^[A-Za-z][A-Za-z\\d]{3,15}")
-        
-        if predicate.evaluate(with: loginTextField.text) {
+        if Validator.checkIsLoginValid(login: loginTextField.text) {
             result = true
         }
         else {
@@ -72,9 +70,7 @@ public class SignUpViewController: UIViewController {
     private func checkIsPasswordValid() -> Bool {
         var result = false
         
-        let predicate = NSPredicate(format:"SELF MATCHES %@", "^[A-Z](?=.*[a-z])(?=.*\\d)[a-zA-Z\\d]{7,15}")
-        
-        if predicate.evaluate(with: passwordTextField.text) {
+        if Validator.checkIsPasswordValid(password: passwordTextField.text) {
             result = true
         }
         else {
